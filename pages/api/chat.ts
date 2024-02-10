@@ -43,7 +43,7 @@ async function askOpenAI({
 }) {
   const pinecone = await pineconeStore();
 
-  // console.log("messages req: ", messages);
+  console.log("messages req: ", messages);
 
   // updated the message content to include context snippets
   var updatedMsgContent;
