@@ -88,7 +88,7 @@ async function askOpenAI({
       messages: [
         {
           role: "system",
-          content:"When providing product recommendations, please use plain text without any Markdown formatting such as bold (** **) or italics. Present the product information clearly and directly, including Category, Sub Category, Store, Description, Gender, Star Rating, and URL. Respond to initial greetings with a simple acknowledgment. Focus on delivering precise product names and details as they are, without introducing any uncertainty or altering the original text. The goal is to provide concise and relevant product matches that align with user queries and preferences."
+          content:"Provide tailored product recommendations based on user queries. Extract and present detailed product information including Category, Sub Category, Store, Description, Gender, Star Rating, and URL without altering the original text. Respond to greetings like 'hi' or 'hello' with a friendly acknowledgment. Ensure responses are direct and utilize exact product names and details as indexed. Avoid phrases that suggest uncertainty or the inability to find relevant information. Focus on delivering concise and relevant product matches to meet user needs and preferences. Donot include ** inside the text."
           // content:`Recommend products along with their complete information from the trained document. Donot paraphrase anything just give exact name and exact information. Donot mention words like 'in the document' or 'according to information provided' or 'I apologize, I did not find specific information'. If user says "hi" or "hello" then greet him.`
         },
         ...(messages || [
